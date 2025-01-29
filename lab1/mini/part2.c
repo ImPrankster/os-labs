@@ -1,5 +1,4 @@
 #include <math.h>
-#include <assert.h>
 
 #include "part2.h"
 
@@ -8,11 +7,9 @@
 // is defined in the part2.h header file.
 //
 // This should only take a couple of lines.
-void
-set_point(struct point *pt, double x, double y)
-{
-	// TODO: Your code here.
-	assert(0);
+void set_point(struct point *pt, double x, double y) {
+  pt->x = x;
+  pt->y = y;
 }
 
 // Compute the planar distance between two points. Recall that the
@@ -24,10 +21,8 @@ set_point(struct point *pt, double x, double y)
 //
 // Hint: Use the sqrt function from math.h.  You do not need to use
 // the pow function; x * x is sufficient to square a variable.
-double
-point_dist(struct point *pt1, struct point *pt2)
-{
-	// TODO: Your code here.
-	assert(0);
-	return 0.0;
+double point_dist(struct point *pt1, struct point *pt2) {
+  double dx = pt1->x - pt2->x;
+  double dy = pt1->y - pt2->y;
+  return sqrt(dx * dx + dy * dy);
 }
